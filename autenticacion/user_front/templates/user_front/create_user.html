@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Crear Usuario</title></head>
+<body>
+<h1>Crear Usuario</h1>
+<form method="post" enctype="multipart/form-data" url="http://127.0.0.1:8000/user_api/users/">
+    {% csrf_token %} 
+    <label>Username:</label><input type="text" name="username"><br>
+    <label>Password:</label><input type="password" name="password"><br>
+    <label>Email:</label><input type="email" name="email"><br>
+    <input type="submit" value="Crear">
+</form>
+</body>
+</html>

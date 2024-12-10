@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-g#_7$y*5yh2)-j2zoa%70ea(bpd(%e3os!8qi*!%g4_9&eqzgg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['127.0.0.1']
+CSRF_TRUSTED_ORIGIN = ['http://127.0.0.1:8000/']
 
 # Application definition
 
@@ -40,9 +40,12 @@ INSTALLED_APPS = [
     #Libreria
     'rest_framework',
     'drf_spectacular',
-    #Aplicacion
+    #AplicacionesBackend
     'user_api',
     'docs',
+    'escuela_api',
+    #AplicacionesFrontend
+    'user_front',
 ]
 
 REST_FRAMEWORK = {
